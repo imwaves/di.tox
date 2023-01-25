@@ -79,10 +79,6 @@ a, a:visited {
     align-items: center;
     gap: 50px;
   }
-
-  & section#team {
-    white-space: pre-line;
-  }
 }
 
 .Root__bg {
@@ -114,17 +110,17 @@ a, a:visited {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 174px;
+  min-width: 174px;
   height: 46px;
+  padding: 0 24px;
 
-  font-weight: 400;
   font-size: 20px;
   letter-spacing: 0.001em;
   text-decoration: none;
 
-  color: #40473D;
+  color: var(--text-c);
 
-  border: 1px solid black;
+  border: 1px solid var(--text-c);
 }
 
 .Btn,
