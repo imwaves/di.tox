@@ -1,0 +1,97 @@
+.Topbar {
+  position: fixed;
+  top: 0; right: 0; left: 0;
+
+  &__dates, & header { font-weight: 500 }
+}
+
+/*DESKTOP*/
+@media (min-width: 741px) {
+  .Topbar {
+    --gap: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 var(--gap);
+    flex-wrap: wrap;
+
+    padding: 0 max(32px, (100vw - var(--max-w)) / 2);
+
+    font-size: 20px;
+
+    > * {
+      display: flex;
+      align-items: center;
+      height: 48px;
+
+      white-space: nowrap;
+    }
+  }
+
+  .Topbar__dates { white-space: break-spaces }
+
+  nav {
+    gap: var(--gap);
+  }
+
+  .Topbar__langs {
+    gap: calc(var(--gap) / 2);
+
+    > * {
+      display: inline-block;
+      cursor: pointer;
+
+      &.--active { font-weight: 500 }
+    }
+  }
+}
+
+/* MOBILE  */
+@media (max-width: 740px) {
+  .Topbar {
+    --gap: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0 var(--gap);
+
+    padding: 8px 24px;
+
+    font-size: 16px;
+
+    > * {
+      display: flex;
+      align-items: center;
+      height: 48px;
+
+      white-space: nowrap;
+    }
+  }
+
+  .Topbar__header,
+  .Topbar__dates { font-weight: 500 }
+
+
+  .Topbar__dates {
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    white-space: initial;
+    gap: 2px 0;
+  }
+
+  nav {
+    gap: var(--gap);
+  }
+
+  .Topbar__langs {
+    gap: calc(var(--gap) / 2);
+
+    > * {
+      display: inline-block;
+      cursor: pointer;
+
+      &.--active { font-weight: 500 }
+    }
+  }
+}
