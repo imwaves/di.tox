@@ -5,6 +5,11 @@
   &__dates, & header { font-weight: 500 }
 }
 
+.Topbar__nav a.--active {
+  font-weight: 500;
+  text-decoration: underline;
+}
+
 /*DESKTOP*/
 @media (min-width: 741px) {
   .Topbar {

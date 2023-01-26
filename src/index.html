@@ -14,7 +14,19 @@
 </head>
 <body id="root">
   <!-- <div id="debug">debug: <span></span></div> -->
-  <div class="Root__bg"></div>
+  <!-- <div class="Root__bg"></div> -->
+  <picture class="Root__bg d-not-sm">
+    <source srcset="./assets/angel6.png?as=webp" type="image/webp">
+    <source srcset="./assets/angel6.png" type="image/png">
+
+    <img src="./assets/angel6.png?as=webp" alt="generative art">
+  </picture>
+  <picture class="Root__bg d-sm">
+    <source srcset="./assets/angel6.m.png?as=webp" type="image/webp">
+    <source srcset="./assets/angel6.m.png" type="image/png">
+
+    <img src="./assets/angel6.m.png?as=webp" alt="generative art">
+  </picture>
   <div class="Root__shadow"></div>
 
   <div class="Topbar">
@@ -56,11 +68,15 @@
 
   <main class="Main">
     <section id="intro" class="Intro">
-      <img class="Intro__logo" src="./assets/logo.png?as=webp" alt="Digital Detox" onload="this.loaded = true">
+      <picture>
+        <source srcset="./assets/logo.png?as=webp" type="image/webp">
+        <source srcset="./assets/logo.png" type="image/png">
+        <img class="Intro__logo" src="./assets/logo.png?as=webp" alt="Digital Detox" onload="this.loaded = true">
+      </picture>
 
       <!-- <canvas id="canvas-0" hidden></canvas> -->
 
-      <a class="Btn Intro__tickets" href="https://b10.ge/product/digital-detox/" target="_blank">
+      <a class="Btn TicketsBtn" href="https://b10.ge/product/digital-detox/" target="_blank">
         <span lang="en">Buy Tickets</span>
         <span lang="ge">ბილეთების ყიდვა</span>
       </a>
@@ -69,9 +85,9 @@
     <section id="info">
       <p lang="en">We invite you to an immersive adventure that starts 13th February in Holoseum - the biggest digital art space in Tbilisi, Georgia. You are going to have an exciting journey through several interactive artworks, that are designed to clean our minds from some of the stereotypes and prejudices. Digital technologies allow to create breathtaking imaginary environments that help us look at ourselves from different perspective, question some rigid patterns of our perception. Following that intention our team have crafted 8 multimedia artworks and we invite you to join this extraordinary experiment.</p>
 
-      <p lang="ge">გეპატიჟებით იმერსიულ თავგადასავალში, რომელიც იწყება 13 თებერვალს ჰოლოზეუმში - ყველაზე დიდ ციფრული ხელოვნების სივრცეში თბილისში. თქვენ ნახავფ გასაოცარ თავგადასავალს რამდენიმე ინტერაქტიული ნამუშევრის მეშვეობით, რომლებიც შექმნილია ჩვენი გონების გასაწმენდად ზოგიერთი სტერეოტიპებისა და ცრურწმენებისგან. ციფრული ტექნოლოგიები საშუალებას გვაძლევს შევქმნათ თვალწარმტაცი წარმოსახვითი გარემო, რომელიც გვეხმარება საკუთარი თავოს სხვადასხვა პერსპექტივიდან დანახვახი და კითხვის ნიშნის ქვეშ აყენებს ჩვენი აღქმის ზოგიერთ ხისტ ნიმუშს. ამ განზრახვის შემდეგ ჩვენმა გუნდმა შექმნა 8 მულტიმედიური ნამუშევარი და გეპატიჟებით რომ შეუერთდეთ ამ არაჩვეულებრივ ექსპერიმენტს.</p>
+      <p lang="ge">გეპატიჟებით იმერსიულ თავგადასავალში, რომელიც იწყება 13 თებერვალს ჰოლოზეუმში - თბილისის ყველაზე დიდ ციფრულ ხელოვნების სივრცეში. თქვენ ნახავთ გასაოცარ თავგადასავალს, ინტერაქტიული ნამუშევრების მეშვეობით, რომლებიც შექმნილია ჩვენი გონების გასაწმენდად, სტერეოტიპებისა და ცრურწმენებისგან. ციფრული ტექნოლოგიები საშუალებას გვაძლევს შევქმნათ თვალწარმტაცი წარმოსახვითი გარემო, რომელიც გვეხმარება საკუთარი თავის სხვადასხვა პერსპექტივიდან დანახვაში და კითხვის ნიშნის ქვეშ აყენებს ჩვენი აღქმის ზოგიერთ ხისტ ნიმუშს. ამ გამოცდილებაზე დაყრდნობით ჩვენმა გუნდმა შექმნა 8 მულტიმედიური ნამუშევარი და გეპატიჟებით რომ შეუერთდეთ ამ არაჩვეულებრივ ექსპერიმენტს.</p>
 
-      <a class="Btn Intro__tickets" href="https://b10.ge/product/digital-detox/" target="_blank">
+      <a class="Btn TicketsBtn" href="https://b10.ge/product/digital-detox/" target="_blank">
         <span lang="en">Buy Tickets</span>
         <span lang="ge">ბილეთების ყიდვა</span>
       </a>
@@ -81,7 +97,7 @@
       <p lang="en">
         <b>Aizek</b> - visual art<br>
         <b>Anushka Chkheidze</b> - sound<br>
-        <b>Anri Loma</b> - sound, interaction<br>
+        <b>Anri Lomia</b> - sound, interaction<br>
         <b>George Badzagua</b> - visual art, AI engineering<br>
         <b>Ildar Iakubov</b> - visual art, interaction, creative direction<br>
         <b>Kseniia Tricheva</b> - graphic design<br>
@@ -97,6 +113,8 @@
         <b>Vlad ISh-</b> - visual art, interaction, web<br>
         <br>
         Our team stands strongly against Russian invasive war in Ukraine and occupation of Georgian land. Part of the money from each ticket sale will be spent to humanitarian aid for people suffering from Russian aggression. A financial report will be open to public.
+        <br>
+        <br>
       </p>
 
       <p lang="ge">
@@ -118,6 +136,8 @@
         <b>ვლად იშ</b> - ვიზუალური ხელოვნება, ინტერაქცია, ვებ<br>
         <br>
         ჩვენი გუნდი მტკიცედ დგას რუსეთის ინვაზიური ომის წინააღმდეგ უკრაინაში და ქართული მიწის ოკუპაციის წინააღმდეგ. თითოეული ბილეთის გაყიდვიდან თანხის ნაწილი რუსული აგრესიით დაზარალებულთა ჰუმანიტარულ დახმარებას მოხმარდება. ფინანსური ანგარიში ღია იქნება საზოგადოებისთვის.
+        <br>
+        <br>
       </p>
     </section>
   </main>
