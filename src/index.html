@@ -8,6 +8,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;500&display=swap" rel="stylesheet">
 
+  <style>
+    @media (min-width: 741px) {
+      .d-sm { display: none !important }
+    }
+    @media (max-width: 740px) {
+      .d-not-sm { display: none !important }
+    }
+
+  </style>
   <link rel="stylesheet" href="./vars.css">
   <link rel="stylesheet" href="./main.css">
   <link rel="stylesheet" href="./Topbar.css">
@@ -15,17 +24,15 @@
 <body id="root">
   <!-- <div id="debug">debug: <span></span></div> -->
   <!-- <div class="Root__bg"></div> -->
-  <picture class="Root__bg d-not-sm">
-    <source srcset="./assets/angel6.png?as=webp" type="image/webp">
-    <source srcset="./assets/angel6.png" type="image/png">
+  <picture class="Root__bg">
+    <source srcset="./assets/angel6.lowr.png?as=webp" media="(min-width: 741px)" type="image/webp">
+    <source srcset="./assets/angel6.lowr.png" media="(min-width: 741px)" type="image/png">
 
-    <img src="./assets/angel6.png?as=webp" alt="generative art">
-  </picture>
-  <picture class="Root__bg d-sm">
-    <source srcset="./assets/angel6.m.png?as=webp" type="image/webp">
-    <source srcset="./assets/angel6.m.png" type="image/png">
+    <source srcset="./assets/angel6.m.png?as=webp" media="(max-width: 740px)" type="image/webp">
+    <source srcset="./assets/angel6.m.png" media="(max-width: 740px)" type="image/png">
 
-    <img src="./assets/angel6.m.png?as=webp" alt="generative art">
+    <img class="d-not-sm" src="./assets/angel6.lowr.png?as=webp" alt="generative art">
+    <img class="d-sm" src="./assets/angel6.m.png?as=webp" alt="generative art">
   </picture>
   <div class="Root__shadow"></div>
 
