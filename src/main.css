@@ -91,6 +91,31 @@ a, a:visited {
   }
 }
 
+.Main__socs {
+  --w: 256px;
+  --mar-t: 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: var(--w);
+  margin-top: var(--mar-t);
+
+  & a {
+    --s: 32px;
+    width: var(--s);
+    height: var(--s);
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
 .Root__bg {
   &, & img {
     position: absolute;
@@ -160,6 +185,11 @@ button { font-weight: 300 }
   .Main > section {
     align-items: flex-start;
     padding: 0 24px;
+  }
+
+  .Main__socs {
+    --w: 152px;
+    & a { --s: 24px }
   }
 
   .TicketsBtn { font-size: 14px }
