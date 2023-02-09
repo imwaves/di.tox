@@ -1,6 +1,11 @@
 function $ (s) { return document.querySelector(s) }
 function $$ (s) { return [...document.querySelectorAll(s)] }
 function px (v) { return `${v}px` }
+const logs = [];
+function log (...args) {
+  console.log(...args)
+  logs.push(args);
+}
 
 const $doc = document.documentElement;
 const $root = document.body;
@@ -12,7 +17,7 @@ let mainHeight;
 function onResize () {
   const { offsetHeight: topbarHeight } = $topbar;
   // const mainHeight = window.outerHeight - topbarHeight;
-  // console.log({mainHeight, topbarHeight})
+  // log({mainHeight, topbarHeight})
   $doc.style.setProperty('--topbar-dh', px(topbarHeight));
   // $doc.style.setProperty('--main-h', px(mainHeight));
   $doc.style.setProperty('--main-h', `max(500px, calc(100vh - ${ px(topbarHeight) }))`);
@@ -41,23 +46,35 @@ setTimeout(onMainScroll, 1e3);
 
 (function Langs () {
   const $langBtns = $$('.Topbar__langs li')
-  const isGeorgian = navigator.language.startsWith('ge');
+  // const isGeorgian = navigator.language.startsWith('ge');
 
-  setLang(isGeorgian ? 'ge' : 'en');
+  const localLang = window.localStorage.getItem('lang');
+
+  log({localLang})
+  setLang(localLang || 'ge');
 
   $langBtns.forEach($btn => {
-    $btn.addEventListener('click', e => setLang($btn.dataset.value));
+    $btn.addEventListener('click', e => setLang($btn.dataset.value, true));
   });
 
-  function setLang (lang) {
+  function setLang (lang, userly) {
     document.documentElement.setAttribute('lang', lang);
 
-    $langBtns.forEach($btn => {
-      if ($btn.classList.contains('--active'))
-        $btn.classList.remove('--active');
+    if (userly)
+      window.localStorage.setItem('lang', lang);
+  }
+})();
 
-      if ($btn.dataset.value === lang)
-        $btn.classList.add('--active');
-    })
+(function Debug () {
+  let clicks = 0;
+  $$('.debug-btn').forEach($el =>
+    $el.addEventListener('click', e => (++clicks > 5) && openDebug())
+  );
+
+  function openDebug () {
+    let content = logs.map(log => log.map(d => JSON.stringify(d))).join('\n');
+    const $el = $('#debug');
+    $el.style.display = '';
+    $('#logs').textContent = content;
   }
 })();

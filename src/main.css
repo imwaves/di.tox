@@ -137,6 +137,15 @@ a, a:visited {
     linear-gradient(-5deg, rgba(255,255,255,0) 59%, rgba(255,255,255,1) 90%, rgba(255,255,255,0) 100%);
 }
 
+#debug {
+  position: fixed;
+  right: 0; bottom: 0; left: 0;
+  width: 100%;
+  padding: 4px;
+  white-space: break-spaces;
+  background: white;
+}
+
 #gmap {
   width: 100%;
   height: 100%;

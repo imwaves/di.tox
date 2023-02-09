@@ -46,10 +46,15 @@
       display: inline-block;
       cursor: pointer;
 
-      &.--active { font-weight: 500 }
+/*      &.--active { font-weight: 500 }*/
     }
+
+
   }
 }
+
+html[lang="ge"] .Topbar__langs [data-value="ge"],
+html[lang="en"] .Topbar__langs [data-value="en"] { font-weight: 500 }
 
 /* MOBILE  */
 @media (max-width: 740px) {

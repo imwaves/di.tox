@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="ge">
 <head>
   <title>Digital Detox</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -151,7 +151,7 @@
         <b>Tinatin Kipiani</b> - administration<br>
         <b>Tornike Chokheli</b> - sound<br>
         <b>Vako Turabelidze</b> - graphic design<br>
-        <b>Vlad ISh-</b> - visual art, interaction, web<br>
+        <b class="debug-btn">Vlad ISh-</b> - visual art, interaction, web<br>
         <br>
         Our team stands strongly against Russian invasive war in Ukraine and occupation of Georgian land. Part of the money from each ticket sale will be spent to humanitarian aid for people suffering from Russian aggression. A financial report will be open to public.
         <br>
@@ -174,7 +174,7 @@
         <b>თინათინ ყიფიანი</b> - ადმინისტრაცია<br>
         <b>თორნიკე ჩოხელი</b> - ხმა<br>
         <b>ვაკო ტურაბელიძე</b> - გრაფიკული დიზაინი<br>
-        <b>ვლად იშ</b> - ვიზუალური ხელოვნება, ინტერაქცია, ვებ<br>
+        <b class="debug-btn">ვლად იშ</b> - ვიზუალური ხელოვნება, ინტერაქცია, ვებ<br>
         <br>
         ჩვენი გუნდი მტკიცედ დგას რუსეთის ინვაზიური ომის წინააღმდეგ უკრაინაში და ქართული მიწის ოკუპაციის წინააღმდეგ. თითოეული ბილეთის გაყიდვიდან თანხის ნაწილი რუსული აგრესიით დაზარალებულთა ჰუმანიტარულ დახმარებას მოხმარდება. ფინანსური ანგარიში ღია იქნება საზოგადოებისთვის.
         <br>
@@ -190,6 +190,11 @@
       </script>
     </section>
   </main>
+
+  <div id="debug" style="display: none">
+    <button onclick="window.localStorage.clear()">clear store</button>
+    <div id="logs"></div>
+  </div>
 
   <script src="./main.js"></script>
   <!-- <script type="module" src="./orient.js"></script>
