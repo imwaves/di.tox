@@ -5,7 +5,7 @@
   "license": "ISC",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "rm -rf dist && parcel build src/index.html"
+    "build": "rm -rf dist && parcel build src/index.html --public-url ./"
   },
   "devDependencies": {
     "@parcel/transformer-glsl": "^2.8.3",
